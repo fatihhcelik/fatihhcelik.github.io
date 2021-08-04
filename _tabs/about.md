@@ -4,12 +4,6 @@ icon: fas fa-info
 order: 4
 ---
 
-I work as a cyber security researcher at one of the existing cyber security company in Turkey. Also, I'm trying to be a computer engineering student in my spare time. I'm a big fan of programming. My programming journey began with the my high school times. Since that time, I've written too many pointless programs, you can find some of them on my [github](https://github.com/fatihhcelik) page :)
-
-Later, realized that I love cyber security and computer security related subjects mostly. Since that time, I've interested in web application security/programming and been trying to learn reverse engineering and low level stuff. Recently, I'm trying to involve into bug hunting and vulnerability researching world.
-
-Also, I'm team lead at the [Hummingbirds Cyber Team](https://github.com/hummingbirdscyber/) which is the group of people working about computer security and artificial intelligence related subjects.
-
 ## Some of my projects
 
 - **Detection of Windows Based Malwares Using Machine Learning**
