@@ -115,6 +115,7 @@ On Netis DL4323 devices, any user role can view sensitive information, such as a
 ## Hall of Fame
 
 - [U.S. Department of Defense](https://hackerone.com/r1gby?type=user)
+- [Microsoft](https://msrc.microsoft.com/update-guide/acknowledgement/online)
 - [AT&T](https://hackerone.com/r1gby?type=user)
 - [Sony](https://hackerone.com/r1gby?type=user)
 - [IBM](https://hackerone.com/r1gby?type=user)
