@@ -116,6 +116,7 @@ On Netis DL4323 devices, any user role can view sensitive information, such as a
 
 - [U.S. Department of Defense](https://hackerone.com/r1gby?type=user)
 - [Microsoft](https://msrc.microsoft.com/update-guide/acknowledgement/online)
+- [Apple](https://support.apple.com/en-us/HT201536)
 - [AT&T](https://hackerone.com/r1gby?type=user)
 - [Sony](https://hackerone.com/r1gby?type=user)
 - [IBM](https://hackerone.com/r1gby?type=user)
