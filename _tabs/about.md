@@ -24,6 +24,10 @@ HackinOS is a beginner level CTF style vulnerable machine. I created this VM for
 
 ## Security Advisories
 
+- **CVE-2021-4118**
+
+There is untrusted YAML Deserialization vulnerability on PyTorchLightning Github repository. PyTorchLightning's saving.py (core.saving.load_hparams_from_yaml) functionality is calling "yaml.UnsafeLoader" from pyyaml Python library which is not secure method. Because of that, maliciously crafted yaml config file can cause code execution on the victim's machine.
+
 - **CVE-2021-28855**
 
 In Deark before 1.5.8, a specially crafted input file can cause a NULL pointer dereference in the dbuf_write function (src/deark-dbuf.c).
