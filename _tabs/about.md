@@ -4,25 +4,19 @@ icon: fas fa-info
 order: 4
 ---
 
-## Some of my projects
-
-- **Detection of Windows Based Malwares Using Machine Learning**
-
-In this project, we tried to understand the characteristics of the malwares and distinguish them from the benign files using machine learning techniques. Thanks to this project, we won the 3. place award in the one of the cyber security projects competition in Turkey.
-
-- **Phishing Detection Using Machine Learning**
-
-In this project, we tried to understand what is the idea and techniques behind of the phishing attacks and detect them. Thanks to this project, we won the 2. place award in the one of the cyber security projects competition in Turkey.
-
-- **[OWASP Vulnerable Web Application Project](https://github.com/OWASP/Vulnerable-Web-Application)**
-
-Vulnerable Web Application is a website that is prepared for people who are interested in web penetration and who want to have information about this subject.
-
-- **[HackinOS Vulnerable Machine](https://www.vulnhub.com/entry/hackinos-1,295/)**
-
-HackinOS is a beginner level CTF style vulnerable machine. I created this VM for my university’s cyber security community and all cyber security enthusiasts. I thank to Mehmet Oğuz Tozkoparan, Ömer Faruk Şenyayla and Tufan Güngör for their help during creating this lab.
-
 ## Security Advisories
+
+- **CVE-2024-25712**
+
+In versions of the swaggo/http-swagger library below v1.2.5, proper HTTP method validation is not enforced. As a result, the handler 'httpSwagger.WrapHandler' and the 'PUT' request can be used to upload a file to memory through *webdav.memFile. Subsequently, this file can be accessed using the GET method. An attacker could exploit this by uploading an HTML file containing malicious JavaScript to memory, making it accessible to other users.
+
+- **CVE-2023-42282**
+
+In the code snippet of library, a security vulnerability arises due to the ip.isPublic function's incorrect identification of the IP address 0x7f.1 as public. This address is actually a hexadecimal representation of the private IP 127.0.0.1. This misclassification can lead to potential Server-Side Request Forgery (SSRF) attacks, as the code may unintentionally permit HTTP requests to internal network resources, creating a significant security risk. The core issue is the function's failure to accurately distinguish between public and private IP addresses.
+
+- **CVE-2023-1496**
+
+SVG Sanitization Bypass Leads to Reflected Cross-site Scripting (XSS) in GitHub repository imgproxy/imgproxy prior to 3.14.0. Full story [here](https://huntr.com/bounties/de603972-935a-401a-96fb-17ddadd282b2/).
 
 - **CVE-2021-4118**
 
@@ -144,3 +138,21 @@ On Netis DL4323 devices, any user role can view sensitive information, such as a
 - [Web.com](https://bugcrowd.com/fatihhclk)
 - University of Cambridge - Thanks letter
 - [Drexel University](https://drexel.edu/it/security/services-processes/bug-bounty/)
+
+## Some of my projects
+
+- **Detection of Windows Based Malwares Using Machine Learning**
+
+In this project, we tried to understand the characteristics of the malwares and distinguish them from the benign files using machine learning techniques. Thanks to this project, we won the 3. place award in the one of the cyber security projects competition in Turkey.
+
+- **Phishing Detection Using Machine Learning**
+
+In this project, we tried to understand what is the idea and techniques behind of the phishing attacks and detect them. Thanks to this project, we won the 2. place award in the one of the cyber security projects competition in Turkey.
+
+- **[OWASP Vulnerable Web Application Project](https://github.com/OWASP/Vulnerable-Web-Application)**
+
+Vulnerable Web Application is a website that is prepared for people who are interested in web penetration and who want to have information about this subject.
+
+- **[HackinOS Vulnerable Machine](https://www.vulnhub.com/entry/hackinos-1,295/)**
+
+HackinOS is a beginner level CTF style vulnerable machine. I created this VM for my university’s cyber security community and all cyber security enthusiasts. I thank to Mehmet Oğuz Tozkoparan, Ömer Faruk Şenyayla and Tufan Güngör for their help during creating this lab.
