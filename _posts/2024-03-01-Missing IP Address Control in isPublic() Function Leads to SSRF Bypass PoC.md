@@ -1,6 +1,6 @@
 ---
 title: Missing IP Address Control in isPublic() Function Leads to SSRF Bypass PoC
-discoverer: Fatih Çelik & Emre Durmaz
+author: Fatih Çelik
 date: 2024-03-01 11:34:00 +0800
 categories: [Vulnerability Research]
 tags: [vulnerability research]
@@ -11,7 +11,10 @@ mermaid: true
 **Software**: [NPM - Ip Package](https://www.npmjs.com/package/ip)
 
 **Vulnerability**: Missing IP Address Control
+
 **CVE**: CVE-2023-42282
+
+**Discoverer:** Fatih Çelik & Emre Durmaz
 
 **Description of the product:**
 
