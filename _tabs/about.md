@@ -155,4 +155,4 @@ Vulnerable Web Application is a website that is prepared for people who are inte
 
 - **[HackinOS Vulnerable Machine](https://www.vulnhub.com/entry/hackinos-1,295/)**
 
-HackinOS is a beginner level CTF style vulnerable machine. I created this VM for my university’s cyber security community and all cyber security enthusiasts. I thank to Mehmet Oğuz Tozkoparan, Ömer Faruk Şenyayla and Tufan Güngör for their help during creating this lab.
+HackinOS is a beginner level CTF style vulnerable machine. I created this VM for my university’s cyber security community and all cyber security enthusiasts. I thank to Mehmet Oğuz Tozkoparan, Ömer Faruk Şenyayla and Tufan Güngör for their help during creating this lab.T
