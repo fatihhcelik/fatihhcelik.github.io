@@ -22,12 +22,12 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7
+          ruby-version: '3.2'
           bundler-cache: false  # Disable cache to avoid platform issues
 
       - name: Install dependencies
         run: |
-          gem install bundler
+          # Use the default bundler that comes with Ruby 3.2
           bundle config set --local without 'development test'
           bundle install --jobs 4 --retry 3
       - name: Deploy

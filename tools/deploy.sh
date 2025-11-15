@@ -73,6 +73,9 @@ resume_site_dir() {
 }
 
 setup_gh() {
+  # Reset Gemfile.lock to avoid conflicts when switching branches
+  git checkout HEAD -- Gemfile.lock 2>/dev/null || true
+  
   if [[ -z $(git branch -av | grep "$PAGES_BRANCH") ]]; then
     _no_pages_branch=true
     git checkout -b "$PAGES_BRANCH"
