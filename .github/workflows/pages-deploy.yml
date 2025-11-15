@@ -23,7 +23,12 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7
-          bundler-cache: true
+          bundler-cache: false  # Disable cache to avoid platform issues
 
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle config set --local without 'development test'
+          bundle install --jobs 4 --retry 3
       - name: Deploy
         run: bash tools/deploy.sh
