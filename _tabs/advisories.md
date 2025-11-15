@@ -1,7 +1,7 @@
 ---
-title: About
-icon: fas fa-info
-order: 4
+title: Advisories
+icon: fas fa-bullhorn
+order: 5
 ---
 
 ## Security Advisories
@@ -109,50 +109,3 @@ In Rukovoditel 2.5.2 has a form_session_token value to prevent CSRF attacks. Thi
 - **CVE-2019-20074**
 
 On Netis DL4323 devices, any user role can view sensitive information, such as a user password or the FTP password, via the form2saveConf.cgi page.
-
-## Hall of Fame
-
-- [U.S. Department of Defense](https://hackerone.com/r1gby?type=user)
-- [Microsoft](https://msrc.microsoft.com/update-guide/acknowledgement/online)
-- [Apple](https://support.apple.com/en-us/HT201536)
-- [AT&T](https://hackerone.com/r1gby?type=user)
-- [Sony](https://hackerone.com/r1gby?type=user)
-- [IBM](https://hackerone.com/r1gby?type=user)
-- [Oracle](https://www.oracle.com/security-alerts/cpujul2020.html)
-- [Asus](https://www.asus.com/content/ASUS-Product-Security-Advisory/)
-- [Toyota](https://hackerone.com/r1gby?type=user)
-- [Sophos](https://www.sophos.com/en-us/legal/sophos-responsible-disclosure-policy/thanks.aspx)
-- [BMW Group](https://www.bmwgroup.com/en/general/Security.html)
-- [Ford](https://hackerone.com/r1gby?type=user)
-- [Oracle](https://www.oracle.com/a/tech/docs/cpuapr2020cvrf.xml)
-- [European Union](https://cert.europa.eu/cert/newsletter/en/latest_HallOfFame_.html)
-- [Dell](https://bugcrowd.com/fatihhclk)
-- [Siemens](https://new.siemens.com/global/en/products/services/cert/hall-of-thanks.html)
-- [NAB](https://bugcrowd.com/fatihhclk)
-- [WP Engine](https://bugcrowd.com/fatihhclk)
-- [Naspers](https://bugcrowd.com/fatihhclk)
-- [Telefonica Germany](https://bugcrowd.com/fatihhclk)
-- [Whatfix](https://bugcrowd.com/fatihhclk)
-- [Cengage VDP](https://bugcrowd.com/fatihhclk)
-- [OLX Group](https://bugcrowd.com/fatihhclk)
-- [Web.com](https://bugcrowd.com/fatihhclk)
-- University of Cambridge - Thanks letter
-- [Drexel University](https://drexel.edu/it/security/services-processes/bug-bounty/)
-
-## Some of my projects
-
-- **Detection of Windows Based Malwares Using Machine Learning**
-
-In this project, we tried to understand the characteristics of the malwares and distinguish them from the benign files using machine learning techniques. Thanks to this project, we won the 3. place award in the one of the cyber security projects competition in Turkey.
-
-- **Phishing Detection Using Machine Learning**
-
-In this project, we tried to understand what is the idea and techniques behind of the phishing attacks and detect them. Thanks to this project, we won the 2. place award in the one of the cyber security projects competition in Turkey.
-
-- **[OWASP Vulnerable Web Application Project](https://github.com/OWASP/Vulnerable-Web-Application)**
-
-Vulnerable Web Application is a website that is prepared for people who are interested in web penetration and who want to have information about this subject.
-
-- **[HackinOS Vulnerable Machine](https://www.vulnhub.com/entry/hackinos-1,295/)**
-
-HackinOS is a beginner level CTF style vulnerable machine. I created this VM for my university’s cyber security community and all cyber security enthusiasts. I thank to Mehmet Oğuz Tozkoparan, Ömer Faruk Şenyayla and Tufan Güngör for their help during creating this lab.
