@@ -4,8 +4,6 @@ icon: fas fa-bullhorn
 order: 5
 ---
 
-## Security Advisories
-
 - **CVE-2024-25712**
 
 In versions of the swaggo/http-swagger library below v1.2.5, proper HTTP method validation is not enforced. As a result, the handler 'httpSwagger.WrapHandler' and the 'PUT' request can be used to upload a file to memory through *webdav.memFile. Subsequently, this file can be accessed using the GET method. An attacker could exploit this by uploading an HTML file containing malicious JavaScript to memory, making it accessible to other users.

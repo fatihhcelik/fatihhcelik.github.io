@@ -1,10 +1,8 @@
 ---
-title: Hall of Fame
+title: Hall of Fames
 icon: fas fa-trophy
 order: 6
 ---
-
-## Hall of Fame
 
 - [U.S. Department of Defense](https://hackerone.com/r1gby?type=user)
 - [Microsoft](https://msrc.microsoft.com/update-guide/acknowledgement/online)
