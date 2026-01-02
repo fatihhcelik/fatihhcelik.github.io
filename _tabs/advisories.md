@@ -4,6 +4,10 @@ icon: fas fa-bullhorn
 order: 5
 ---
 
+- **CVE-2025-68613**
+
+n8n contains a critical Remote Code Execution (RCE) vulnerability in its workflow expression evaluation system. Under certain conditions, expressions supplied by authenticated users during workflow configuration may be evaluated in an execution context that is not sufficiently isolated from the underlying runtime. [Github Advisory Reference](https://github.com/n8n-io/n8n/security/advisories/GHSA-v98v-ff95-f3cp)
+
 - **CVE-2024-25712**
 
 In versions of the swaggo/http-swagger library below v1.2.5, proper HTTP method validation is not enforced. As a result, the handler 'httpSwagger.WrapHandler' and the 'PUT' request can be used to upload a file to memory through *webdav.memFile. Subsequently, this file can be accessed using the GET method. An attacker could exploit this by uploading an HTML file containing malicious JavaScript to memory, making it accessible to other users.
@@ -19,14 +23,6 @@ SVG Sanitization Bypass Leads to Reflected Cross-site Scripting (XSS) in GitHub 
 - **CVE-2021-4118**
 
 There is untrusted YAML Deserialization vulnerability on PyTorchLightning Github repository. PyTorchLightning's saving.py (core.saving.load_hparams_from_yaml) functionality is calling "yaml.UnsafeLoader" from pyyaml Python library which is not secure method. Because of that, maliciously crafted yaml config file can cause code execution on the victim's machine.
-
-- **CVE-2021-28855**
-
-In Deark before 1.5.8, a specially crafted input file can cause a NULL pointer dereference in the dbuf_write function (src/deark-dbuf.c).
-
-- **CVE-2021-28856**
-
-In Deark before v1.5.8, a specially crafted input file can cause a division by zero in (src/fmtutil.c) because of the value of pixelsize.
 
 - **CVE-2021-28060**
 
