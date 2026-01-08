@@ -6,46 +6,48 @@ layout: compress
 <!DOCTYPE html>
 
 {% capture prefer_mode %}
-  {% if site.theme_mode %}
-    mode="{{ site.theme_mode }}"
-  {% endif %}
+{% if site.theme_mode %}
+mode="{{ site.theme_mode }}"
+{% endif %}
 {% endcapture %}
 
-<html lang="{{ site.lang | default: "en-US" }}" {{ prefer_mode }}>
+<html lang="{{ site.lang | default: " en-US" }}" {{ prefer_mode }}>
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body data-spy="scroll" data-target="#toc">
+<body data-spy="scroll" data-target="#toc">
 
-    {% include sidebar.html %}
+  {% include side-toggles.html %}
 
-    {% include topbar.html %}
+  {% include sidebar.html %}
 
-    <div id="main-wrapper">
-      <div id="main">
+  {% include topbar.html %}
 
-        {% include refactor-content.html content=content %}
+  <div id="main-wrapper">
+    <div id="main">
 
-        {% include footer.html %}
+      {% include refactor-content.html content=content %}
 
-      </div>
+      {% include footer.html %}
 
-      {% include search-results.html %}
+    </div>
 
-    </div> <!-- #main-wrapper -->
+    {% include search-results.html %}
 
-    {% if page.mermaid %}
-      {% include mermaid.html %}
-    {% endif %}
+  </div> <!-- #main-wrapper -->
 
-    <div id="mask"></div>
+  {% if page.mermaid %}
+  {% include mermaid.html %}
+  {% endif %}
 
-    <a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button">
-      <i class="fas fa-angle-up"></i>
-    </a>
+  <div id="mask"></div>
 
-    {% include search-loader.html %}
+  <a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button">
+    <i class="fas fa-angle-up"></i>
+  </a>
 
-  </body>
+  {% include search-loader.html %}
+
+</body>
 
 </html>

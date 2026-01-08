@@ -1,0 +1,29 @@
+<div id="sidebar-toggle-wrapper" class="d-none d-xl-block">
+  <div id="sidebar-toggle" class="sidebar-toggle-btn left" 
+       onclick="document.body.classList.toggle('sidebar-hidden'); localStorage.setItem('sidebar-hidden', document.body.classList.contains('sidebar-hidden')); this.querySelector('i').classList.toggle('fa-angle-left'); this.querySelector('i').classList.toggle('fa-angle-right');">
+    <i class="fas fa-angle-left"></i>
+  </div>
+</div>
+
+<div id="toc-toggle-wrapper" class="d-none d-xl-block">
+  <div id="toc-toggle" class="sidebar-toggle-btn right" 
+       onclick="document.body.classList.toggle('panel-hidden'); localStorage.setItem('panel-hidden', document.body.classList.contains('panel-hidden')); this.querySelector('i').classList.toggle('fa-angle-left'); this.querySelector('i').classList.toggle('fa-angle-right');">
+    <i class="fas fa-angle-right"></i>
+  </div>
+</div>
+
+<script>
+// Load saved preferences immediately
+(function() {
+  if (localStorage.getItem('sidebar-hidden') === 'true') {
+    document.body.classList.add('sidebar-hidden');
+    var btn = document.getElementById('sidebar-toggle');
+    if (btn) { var i = btn.querySelector('i'); if(i) { i.classList.remove('fa-angle-left'); i.classList.add('fa-angle-right'); } }
+  }
+  if (localStorage.getItem('panel-hidden') === 'true') {
+    document.body.classList.add('panel-hidden');
+    var btn = document.getElementById('toc-toggle');
+    if (btn) { var i = btn.querySelector('i'); if(i) { i.classList.remove('fa-angle-right'); i.classList.add('fa-angle-left'); } }
+  }
+})();
+</script>
