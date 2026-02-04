@@ -114,6 +114,12 @@ What it does is:
 
 ## Usage
 
+### Local Dev.
+
+```
+bundle exec jekyll s --livereload
+```
+
 ### Configuration
 
 Update the variables of `_config.yml` as needed. Some of them are typical options:
