@@ -1,7 +1,7 @@
 ---
 title: 'n8n RCE(s): A Tale of 4 Acts (CVE-2025-68613 & CVE-2026-25049)'
 author: Fatih Çelik
-date: 2026-01-29 01:00:00 +0300
+date: 2026-02-04 01:00:00 +0300
 categories: [Vulnerability Research]
 tags: [vulnerability research]
 math: true

@@ -1,7 +1,7 @@
 ---
 title: 'n8n: OS Command Injection in Git Node - CVE-2026-25053'
 author: Fatih Çelik
-date: 2026-01-29 00:00:00 +0300
+date: 2026-02-04 00:00:00 +0300
 categories: [Vulnerability Research]
 tags: [vulnerability research]
 math: true

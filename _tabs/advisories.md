@@ -4,6 +4,20 @@ icon: fas fa-bullhorn
 order: 5
 ---
 
+- **CVE-2026-25049**
+
+Additional exploits in the expression evaluation of n8n have been identified and patched following CVE-2025-68613.
+
+An authenticated user with permission to create or modify workflows could abuse crafted expressions in workflow parameters to trigger unintended system command execution on the host running n8n. [Advisory](https://github.com/n8n-io/n8n/security/advisories/GHSA-6cqr-8cfr-67f8)
+
+- **CVE-2026-25053**
+
+Vulnerabilities in the Git node allowed authenticated users with permission to create or modify workflows to execute arbitrary system commands or read arbitrary files on the n8n host. [Advisory](https://github.com/n8n-io/n8n/security/advisories/GHSA-9g95-qf3f-ggrw)
+
+- **CVE-2026-0962.**
+
+Wireshark SOME/IP-SD dissector crash. [Advisory](https://www.wireshark.org/security/wnpa-sec-2026-03.html)
+
 - **CVE-2025-68613**
 
 n8n contains a critical Remote Code Execution (RCE) vulnerability in its workflow expression evaluation system. Under certain conditions, expressions supplied by authenticated users during workflow configuration may be evaluated in an execution context that is not sufficiently isolated from the underlying runtime. [Github Advisory Reference](https://github.com/n8n-io/n8n/security/advisories/GHSA-v98v-ff95-f3cp)
