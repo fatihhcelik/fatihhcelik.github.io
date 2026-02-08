@@ -6,6 +6,7 @@ categories: [Vulnerability Research]
 tags: [vulnerability research]
 math: true
 mermaid: true
+description: "Analysis of CVE-2026-25053, an OS Command Injection vulnerability in n8n's Git node. Explaining the flaw in `addConfig` validation and demonstrating an RCE exploit."
 ---
 
 ## TL;DR but not really

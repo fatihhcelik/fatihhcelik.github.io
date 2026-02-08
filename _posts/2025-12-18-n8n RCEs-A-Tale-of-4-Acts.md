@@ -6,6 +6,7 @@ categories: [Vulnerability Research]
 tags: [vulnerability research]
 math: true
 mermaid: true
+description: "A detailed analysis of CVE-2025-68613 and CVE-2026-25049 in n8n, covering the initial RCE, the first patch, and the subsequent bypass techniques using Template Literals and Object Destructuring."
 ---
 
 - Advisory: [CVE-2025-68613](https://github.com/n8n-io/n8n/security/advisories/GHSA-v98v-ff95-f3cp)
