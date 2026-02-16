@@ -4,11 +4,25 @@ icon: fas fa-bullhorn
 order: 5
 ---
 
+- **CVE-2026-1767**
+
+A flaw was found in the GNOME localsearch (previously known as tracker-miners) MP3 Extractor tracker-extract-mp3 component. A remote attacker could exploit this heap buffer overflow vulnerability by providing a specially crafted MP3 file containing malformed ID3 tags. This incorrect length calculation during the parsing of performer tags can lead to a read beyond the allocated buffer, potentially causing a Denial of Service (DoS) due to a crash or enabling information disclosure.
+
+- **CVE-2026-1766**
+
+A flaw was found in GNOME localsearch (previously known as tracker-miners) MP3 Extractor, specifically within the tracker-extract-mp3 component. This heap buffer overflow vulnerability occurs when processing specially crafted MP3 files containing malformed ID3v2.3 COMM (Comment) tags. An attacker could exploit this by providing a malicious MP3 file, leading to a denial of service (DoS), which causes an application crash, and potentially disclosing sensitive information from the heap memory.
+
+- **CVE-2026-1765**
+
+A flaw was found in the tracker-extract-mp3 component of GNOME localsearch (previously known as tracker-miners). This vulnerability, a heap buffer overflow, occurs when processing specially crafted MP3 files. A remote attacker could exploit this by providing a malicious MP3 file, leading to a Denial of Service (DoS) where the application crashes. It may also potentially expose sensitive information from the system's memory.
+
+- **CVE-2026-1764**
+
+A flaw was found in GNOME localsearch (previously known as tracker-miners) MP3 Extractor. When processing specially crafted MP3 files containing ID3v2.4 tags, a missing bounds check in the extract_performers_tags function can lead to a heap buffer overflow. This vulnerability allows a remote attacker to cause a Denial of Service (DoS) by triggering a read of unmapped memory. In some cases, it could also lead to information disclosure by reading visible heap data.
+
 - **CVE-2026-25049**
 
-Additional exploits in the expression evaluation of n8n have been identified and patched following CVE-2025-68613.
-
-An authenticated user with permission to create or modify workflows could abuse crafted expressions in workflow parameters to trigger unintended system command execution on the host running n8n. [Advisory](https://github.com/n8n-io/n8n/security/advisories/GHSA-6cqr-8cfr-67f8)
+Additional exploits in the expression evaluation of n8n have been identified and patched following CVE-2025-68613. An authenticated user with permission to create or modify workflows could abuse crafted expressions in workflow parameters to trigger unintended system command execution on the host running n8n. [Advisory](https://github.com/n8n-io/n8n/security/advisories/GHSA-6cqr-8cfr-67f8)
 
 - **CVE-2026-25053**
 
@@ -16,7 +30,7 @@ Vulnerabilities in the Git node allowed authenticated users with permission to c
 
 - **CVE-2026-0962.**
 
-Wireshark SOME/IP-SD dissector crash. [Advisory](https://www.wireshark.org/security/wnpa-sec-2026-03.html)
+Wireshark SOME/IP-SD dissector buffer-overflow leads to crash. [Advisory](https://www.wireshark.org/security/wnpa-sec-2026-03.html)
 
 - **CVE-2025-68613**
 
