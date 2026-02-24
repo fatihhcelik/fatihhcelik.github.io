@@ -17,7 +17,7 @@ timezone: Asia/Shanghai
 # --------------------------
 title: Fatih's Blog                          # the main title
 
-tagline: Random things about computer security   # it will display as the sub-title
+tagline: Mostly finding bugs, rarely turning them into vulnerabilities   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A personal blog focused on cyber security, reverse engineering, binary exploitation,
