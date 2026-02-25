@@ -4,6 +4,10 @@ icon: fas fa-bullhorn
 order: 5
 ---
 
+- **CVE-2026-27498**
+
+An authenticated user with permission to create or modify workflows could chain the Read/Write Files from Disk node with git operations to achieve remote code execution. By writing to specific configuration files and then triggering a git operation, the attacker could execute arbitrary shell commands on the n8n host. [Advisory](https://github.com/n8n-io/n8n/security/advisories/GHSA-x2mw-7j39-93xq)
+ 
 - **CVE-2026-1767**
 
 A flaw was found in the GNOME localsearch (previously known as tracker-miners) MP3 Extractor tracker-extract-mp3 component. A remote attacker could exploit this heap buffer overflow vulnerability by providing a specially crafted MP3 file containing malformed ID3 tags. This incorrect length calculation during the parsing of performer tags can lead to a read beyond the allocated buffer, potentially causing a Denial of Service (DoS) due to a crash or enabling information disclosure.
