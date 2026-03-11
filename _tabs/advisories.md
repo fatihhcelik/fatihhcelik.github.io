@@ -4,134 +4,394 @@ icon: fas fa-bullhorn
 order: 5
 ---
 
-- **CVE-2026-27498**
-
-An authenticated user with permission to create or modify workflows could chain the Read/Write Files from Disk node with git operations to achieve remote code execution. By writing to specific configuration files and then triggering a git operation, the attacker could execute arbitrary shell commands on the n8n host. [Advisory](https://github.com/n8n-io/n8n/security/advisories/GHSA-x2mw-7j39-93xq)
- 
-- **CVE-2026-1767**
-
-A flaw was found in the GNOME localsearch (previously known as tracker-miners) MP3 Extractor tracker-extract-mp3 component. A remote attacker could exploit this heap buffer overflow vulnerability by providing a specially crafted MP3 file containing malformed ID3 tags. This incorrect length calculation during the parsing of performer tags can lead to a read beyond the allocated buffer, potentially causing a Denial of Service (DoS) due to a crash or enabling information disclosure.
-
-- **CVE-2026-1766**
-
-A flaw was found in GNOME localsearch (previously known as tracker-miners) MP3 Extractor, specifically within the tracker-extract-mp3 component. This heap buffer overflow vulnerability occurs when processing specially crafted MP3 files containing malformed ID3v2.3 COMM (Comment) tags. An attacker could exploit this by providing a malicious MP3 file, leading to a denial of service (DoS), which causes an application crash, and potentially disclosing sensitive information from the heap memory.
-
-- **CVE-2026-1765**
-
-A flaw was found in the tracker-extract-mp3 component of GNOME localsearch (previously known as tracker-miners). This vulnerability, a heap buffer overflow, occurs when processing specially crafted MP3 files. A remote attacker could exploit this by providing a malicious MP3 file, leading to a Denial of Service (DoS) where the application crashes. It may also potentially expose sensitive information from the system's memory.
-
-- **CVE-2026-1764**
-
-A flaw was found in GNOME localsearch (previously known as tracker-miners) MP3 Extractor. When processing specially crafted MP3 files containing ID3v2.4 tags, a missing bounds check in the extract_performers_tags function can lead to a heap buffer overflow. This vulnerability allows a remote attacker to cause a Denial of Service (DoS) by triggering a read of unmapped memory. In some cases, it could also lead to information disclosure by reading visible heap data.
-
-- **CVE-2026-25049**
-
-Additional exploits in the expression evaluation of n8n have been identified and patched following CVE-2025-68613. An authenticated user with permission to create or modify workflows could abuse crafted expressions in workflow parameters to trigger unintended system command execution on the host running n8n. [Advisory](https://github.com/n8n-io/n8n/security/advisories/GHSA-6cqr-8cfr-67f8)
-
-- **CVE-2026-25053**
-
-Vulnerabilities in the Git node allowed authenticated users with permission to create or modify workflows to execute arbitrary system commands or read arbitrary files on the n8n host. [Advisory](https://github.com/n8n-io/n8n/security/advisories/GHSA-9g95-qf3f-ggrw)
-
-- **CVE-2026-0962.**
-
-Wireshark SOME/IP-SD dissector buffer-overflow leads to crash. [Advisory](https://www.wireshark.org/security/wnpa-sec-2026-03.html)
-
-- **CVE-2025-68613**
-
-n8n contains a critical Remote Code Execution (RCE) vulnerability in its workflow expression evaluation system. Under certain conditions, expressions supplied by authenticated users during workflow configuration may be evaluated in an execution context that is not sufficiently isolated from the underlying runtime. [Github Advisory Reference](https://github.com/n8n-io/n8n/security/advisories/GHSA-v98v-ff95-f3cp)
-
-- **CVE-2024-25712**
-
-In versions of the swaggo/http-swagger library below v1.2.5, proper HTTP method validation is not enforced. As a result, the handler 'httpSwagger.WrapHandler' and the 'PUT' request can be used to upload a file to memory through *webdav.memFile. Subsequently, this file can be accessed using the GET method. An attacker could exploit this by uploading an HTML file containing malicious JavaScript to memory, making it accessible to other users.
-
-- **CVE-2023-42282**
-
-In the code snippet of library, a security vulnerability arises due to the ip.isPublic function's incorrect identification of the IP address 0x7f.1 as public. This address is actually a hexadecimal representation of the private IP 127.0.0.1. This misclassification can lead to potential Server-Side Request Forgery (SSRF) attacks, as the code may unintentionally permit HTTP requests to internal network resources, creating a significant security risk. The core issue is the function's failure to accurately distinguish between public and private IP addresses.
-
-- **CVE-2023-1496**
-
-SVG Sanitization Bypass Leads to Reflected Cross-site Scripting (XSS) in GitHub repository imgproxy/imgproxy prior to 3.14.0. Full story [here](https://huntr.com/bounties/de603972-935a-401a-96fb-17ddadd282b2/).
-
-- **CVE-2021-4118**
-
-There is untrusted YAML Deserialization vulnerability on PyTorchLightning Github repository. PyTorchLightning's saving.py (core.saving.load_hparams_from_yaml) functionality is calling "yaml.UnsafeLoader" from pyyaml Python library which is not secure method. Because of that, maliciously crafted yaml config file can cause code execution on the victim's machine.
-
-- **CVE-2021-28060**
-
-A Server-Side Request Forgery (SSRF) vulnerability in Group Office 6.4.196 allows a remote attacker to forge GET requests to arbitrary URLs via the url parameter to group/api/upload.php.
-
-- **CVE-2020-35419**
-
-Cross Site Scripting (XSS) in Group Office CRM 6.4.196 via the SET_LANGUAGE parameter.
-
-- **CVE-2020-35418**
-
-Cross Site Scripting (XSS) in the contact page of Group Office CRM 6.4.196 by uploading a crafted svg file.
-
-- **CVE-2020-25538**
-
-An authenticated attacker can inject malicious code into "lang" parameter in /uno/central.php file in CMSuno 1.6.2 and run this PHP code in the web page. In this way, attacker can takeover the control of the server.
-
-- **CVE-2020-25557**
-
-In CMSuno 1.6.2, an attacker can inject malicious PHP code as a "username" while changing his/her username & password. After that, when attacker logs in to the application, attacker's code will be run. As a result of this vulnerability, authenticated user can run command on the server.
-
-- **CVE-2020-26803**
-
-In Sentrifugo 3.2, users can upload an image under "Assets -> Add" tab. This "Upload Images" functionality is suffered from "Unrestricted File Upload" vulnerability so attacker can upload malicious files using this functionality and control the server.
-
-- **CVE-2020-26804**
-
-In Sentrifugo 3.2, users can share an announcement under "Organization -> Announcements" tab. Also, in this page, users can upload attachments with the shared announcements. This "Upload Attachment" functionality is suffered from "Unrestricted File Upload" vulnerability so attacker can upload malicious files using this functionality and control the server.
-
-- **CVE-2020-26805**
-
-In Sentrifugo 3.2, admin can edit employee's informations via this endpoint --> /sentrifugo/index.php/empadditionaldetails/edit/userid/2. In this POST request, "employeeNumId" parameter is affected by SQLi vulnerability. Attacker can inject SQL commands into query, read data from database or write data into the database.
-
-- **CVE-2020-11827**
-
-In GOG Galaxy 1.2.67, there is a service that is vulnerable to weak file/service permissions: GalaxyClientService.exe. An attacker can put malicious code in a Trojan horse GalaxyClientService.exe. After that, the attacker can re-start this service as an unprivileged user to escalate his/her privileges and run commands on the machine with SYSTEM rights.
-
-- **CVE-2020-2909**
-
-Vulnerability in the Oracle VM VirtualBox product of Oracle Virtualization (component: Core). Supported versions that are affected are Prior to 5.2.40, prior to 6.0.20 and prior to 6.1.6. Easily exploitable vulnerability allows low privileged attacker with logon to the infrastructure where Oracle VM VirtualBox executes to compromise Oracle VM VirtualBox. Successful attacks require human interaction from a person other than the attacker. Successful attacks of this vulnerability can result in unauthorized ability to cause a partial denial of service (partial DOS) of Oracle VM VirtualBox.
-
-- **CVE-2020-11819**
-
-In Rukovoditel 2.5.2, an attacker may inject an arbitrary .php file location instead of a language file and thus achieve command execution.
-
-- **CVE-2020-11817**
-
-In Rukovoditel V2.5.2, attackers can upload an arbitrary file to the server just changing the the content-type value. As a result of that, an attacker can execute a command on the server. This specific attack only occurs with the Maintenance Mode setting.
-
-- **CVE-2020-11811**
-
-In qdPM 9.1, an attacker can upload a malicious .php file to the server by exploiting the Add Profile Photo capability with a crafted content-type value. After that, the attacker can execute an arbitrary command on the server using this malicious file.
-
-- **CVE-2020-11815**
-
-In Rukovoditel 2.5.2, attackers can upload arbitrary file to the server by just changing the content-type value. As a result of that, an attacker can execute a command on the server. This specific attack only occurs without the Maintenance Mode setting.
-
-- **CVE-2020-11816**
-
-Rukovoditel 2.5.2 is affected by a SQL injection vulnerability because of improper handling of the reports_id (POST) parameter.
-
-- **CVE-2020-11812**
-
-Rukovoditel 2.5.2 is affected by a SQL injection vulnerability because of improper handling of the filters[0][value] or filters[1][value] parameter.
-
-- **CVE-2020-11820**
-
-Rukovoditel 2.5.2 is affected by a SQL injection vulnerability because of improper handling of the entities_id parameter.
-
-- **CVE-2020-11826**
-
-Users can lock their notes with a password in Memono version 3.8. Thus, users needs to know a password to read notes. However, these notes are stored in a database without encryption and an attacker can read the password-protected notes without having the password. Notes are stored in the ZENTITY table in the memono.sqlite database.
-
-- **CVE-2020-11818**
-
-In Rukovoditel 2.5.2 has a form_session_token value to prevent CSRF attacks. This protection mechanism can be bypassed with another user's valid token. Thus, an attacker can change the Admin password by using a CSRF attack and escalate his/her privileges.
-
-- **CVE-2019-20074**
-
-On Netis DL4323 devices, any user role can view sensitive information, such as a user password or the FTP password, via the form2saveConf.cgi page.
+<style>
+/* Search Controls */
+.advisories-controls {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-box {
+  position: relative;
+  width: 280px;
+}
+
+.search-box i {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted-color, #888);
+  font-size: 0.85rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem 0.5rem 2.2rem;
+  border-radius: 8px;
+  border: 1px solid var(--main-border-color, #444);
+  background: var(--search-wrapper-bg, #222);
+  color: var(--text-color, #c9d1d9);
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: var(--link-color, #58a6ff);
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.15);
+}
+
+/* Timeline Layout */
+.timeline-section {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-left: 2rem;
+}
+
+.timeline-section::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--timeline-color, #333);
+  border-radius: 2px;
+}
+
+.timeline-year {
+  position: relative;
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin: 0 0 1.5rem 0;
+  color: var(--text-color, #c9d1d9);
+  display: flex;
+  align-items: center;
+}
+
+.timeline-year::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  width: 14px;
+  height: 14px;
+  background: var(--timeline-node-bg, #969898);
+  border: 3px solid var(--link-color, #58a6ff);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px var(--body-bg, #0d1117);
+}
+
+/* Grid */
+.advisories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card */
+.advisory-card {
+  background: var(--card-bg, var(--button-bg, #fff));
+  border: 1px solid var(--card-border-color, var(--btn-border-color, #e9ecef));
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 6px var(--card-box-shadow, rgba(0,0,0,0.05));
+}
+
+.advisory-card.hidden {
+  display: none !important;
+}
+
+.advisory-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px var(--card-box-shadow, rgba(0,0,0,0.15));
+  border-color: var(--link-color, #58a6ff);
+}
+
+/* Header */
+.advisory-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 0.6rem;
+}
+
+.advisory-cve {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-color, #d8d8d8);
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: inherit;
+  border-bottom: none;
+  line-height: 1.2;
+}
+
+.advisory-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: var(--tag-bg, rgba(0, 0, 0, 0.075));
+  color: var(--text-color, #333);
+  border: 1px solid var(--btn-border-color, #dee2e6);
+  white-space: nowrap;
+}
+
+/* Product Badge */
+.badge.product {
+  background: rgba(88, 166, 255, 0.12);
+  color: var(--link-color, #58a6ff);
+  border-color: rgba(88, 166, 255, 0.3);
+}
+
+/* Critical / Red */
+.badge.type-rce, .badge.type-command-execution, .badge.type-sqli, .badge.type-command-execution---file-read {
+  background: rgba(255, 59, 48, 0.15);
+  color: #e53e3e;
+  border-color: rgba(255, 59, 48, 0.35);
+}
+
+/* Warning / Orange */
+.badge.type-xss, .badge.type-ssrf, .badge.type-unrestricted-file-upload {
+  background: rgba(221, 107, 32, 0.15);
+  color: #dd6b20;
+  border-color: rgba(221, 107, 32, 0.35);
+}
+
+/* Info / Purple */
+.badge.type-information-disclosure, .badge.type-buffer-overflow, .badge.type-heap-buffer-overflow, .badge.type-dos, .badge.type-privilege-escalation, .badge.type-csrf, .badge.type-insecure-deserialization {
+  background: rgba(128, 90, 213, 0.15);
+  color: #805ad5;
+  border-color: rgba(128, 90, 213, 0.35);
+}
+
+/* Body */
+.advisory-body {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text-muted-color, #a0a0a0);
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+/* Footer */
+.advisory-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--main-border-color, #333);
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.advisory-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--link-color, #58a6ff);
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  border: 1px solid transparent;
+}
+
+.advisory-link:hover {
+  text-decoration: none !important;
+  gap: 0.6rem;
+  background: var(--tag-bg, rgba(88, 166, 255, 0.1));
+  border-color: var(--main-border-color, #444);
+}
+
+.advisory-link i {
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.advisory-link:hover i {
+  transform: translateX(3px);
+}
+
+.advisory-post-link {
+  color: #4ade80 !important;
+  border: 1px solid rgba(74, 222, 128, 0.2);
+}
+
+.advisory-post-link:hover {
+  background: rgba(74, 222, 128, 0.1) !important;
+  border-color: rgba(74, 222, 128, 0.4);
+}
+
+/* Empty State */
+.no-results {
+  display: none;
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-muted-color, #888);
+  font-size: 1rem;
+}
+
+</style>
+
+<div class="advisories-controls">
+  <div class="search-box">
+    <i class="fas fa-search"></i>
+    <input type="text" id="advisory-search" class="search-input" placeholder="Search by CVE, Product, Type (e.g. n8n, RCE)..." autocomplete="off">
+  </div>
+</div>
+
+<div id="no-results" class="no-results">
+  <i class="fas fa-file-search" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+  <p>No advisories found matching your query.</p>
+</div>
+
+<!-- Extract all unique years -->
+{% assign years = "" | split: "," %}
+{% for advisory in site.data.advisories %}
+  {% assign current_year = advisory.cve | slice: 4, 4 %}
+  {% unless years contains current_year %}
+    {% assign years = years | push: current_year %}
+  {% endunless %}
+{% endfor %}
+
+{% assign sorted_years = years | sort | reverse %}
+
+<div id="timeline-container">
+  {% for year in sorted_years %}
+    <div class="timeline-section" data-year="{{ year }}">
+      <h2 class="timeline-year">{{ year }}</h2>
+      <div class="advisories-grid">
+      
+        {% for advisory in site.data.advisories %}
+          {% assign adv_year = advisory.cve | slice: 4, 4 %}
+          
+          {% if adv_year == year %}
+            {% assign downType = advisory.type | downcase | replace: " ", "-" | replace: "/", "-" %}
+            
+            <div class="advisory-card" data-search="{{ advisory.cve | downcase }} {{ advisory.product | downcase }} {{ advisory.type | downcase }} {{ advisory.description | downcase }}">
+              <div class="advisory-header">
+                <h3 class="advisory-cve">{{ advisory.cve }}</h3>
+                <div class="advisory-badges">
+                  <span class="badge product"><i class="fas fa-box" style="margin-right:3px;"></i>{{ advisory.product }}</span>
+                  <span class="badge type-{{ downType }}"><i class="fas fa-bug" style="margin-right:3px;"></i>{{ advisory.type }}</span>
+                </div>
+              </div>
+              
+              <div class="advisory-body">
+                {{ advisory.description }}
+              </div>
+              
+              {% if advisory.link or advisory.post_link %}
+              <div class="advisory-footer">
+                {% if advisory.post_link %}
+                <a href="{{ advisory.post_link }}" class="advisory-link advisory-post-link">
+                  <i class="fas fa-book-open"></i> Read Post
+                </a>
+                {% endif %}
+                
+                {% if advisory.link %}
+                <a href="{{ advisory.link }}" target="_blank" rel="noopener noreferrer" class="advisory-link">
+                  Read Advisory <i class="fas fa-arrow-right"></i>
+                </a>
+                {% endif %}
+              </div>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+        
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const searchInput = document.getElementById('advisory-search');
+  const cards = document.querySelectorAll('.advisory-card');
+  const sections = document.querySelectorAll('.timeline-section');
+  const noResults = document.getElementById('no-results');
+
+  // Small helper to make placeholder text more clear
+  searchInput.setAttribute('placeholder', 'Search (e.g. "product:n8n", "type:rce", "CVE-2026")...');
+
+  searchInput.addEventListener('input', function(e) {
+    const rawSearch = e.target.value.toLowerCase().trim();
+    let totalVisible = 0;
+    
+    // Parse filters
+    let searchProduct = null;
+    let searchType = null;
+    let generalSearch = rawSearch;
+    
+    const productMatch = rawSearch.match(/product:([^\s]+)/);
+    if (productMatch) {
+      searchProduct = productMatch[1];
+      generalSearch = generalSearch.replace(productMatch[0], '').trim();
+    }
+    
+    const typeMatch = rawSearch.match(/type:([^\s]+)/);
+    if (typeMatch) {
+      searchType = typeMatch[1];
+      generalSearch = generalSearch.replace(typeMatch[0], '').trim();
+    }
+
+    cards.forEach(card => {
+      let isVisible = true;
+      const searchableText = card.getAttribute('data-search') || "";
+      
+      // We can grab product and type directly from the elements since we didn't add data-attributes inside liquid above
+      const cardProduct = (card.querySelector('.badge.product')?.textContent || "").toLowerCase();
+      const cardType = (card.querySelector('.badge[class*="type-"]')?.textContent || "").toLowerCase();
+      
+      // Check filters
+      if (searchProduct && !cardProduct.includes(searchProduct)) isVisible = false;
+      if (searchType && !cardType.includes(searchType)) isVisible = false;
+      if (generalSearch && !searchableText.includes(generalSearch)) isVisible = false;
+      
+      if (isVisible) {
+        card.classList.remove('hidden');
+        totalVisible++;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+
+    // Build timeline aesthetics: hide empty years
+    let anySectionVisible = false;
+    sections.forEach(section => {
+      // Find all cards inside this section that are NOT hidden
+      const visibleCardsInYear = section.querySelectorAll('.advisory-card:not(.hidden)');
+      if (visibleCardsInYear.length === 0) {
+        section.style.display = 'none';
+      } else {
+        section.style.display = 'block';
+        anySectionVisible = true;
+      }
+    });
+
+    // Show empty state if needed
+    if (!anySectionVisible && rawSearch !== "") {
+      noResults.style.display = 'block';
+    } else {
+      noResults.style.display = 'none';
+    }
+  });
+});
+</script>
