@@ -12,13 +12,18 @@ order: 5
   justify-content: flex-end;
 }
 
-/* Hide the right panel and expand content to full width */
+/* Hide the right panel and expand content on this page */
 #panel-wrapper {
   display: none !important;
 }
-#main-wrapper .col-xl-8 {
+/* Zero out all the calc-based left padding from Chirpy's media queries */
+#main > div.row {
+  padding-left: 0 !important;
+}
+#main > div.row > div.col-xl-8 {
   max-width: 100% !important;
   flex: 0 0 100% !important;
+  padding-left: 1rem !important;
 }
 
 .search-box {
@@ -56,13 +61,13 @@ order: 5
 .timeline-section {
   position: relative;
   margin-bottom: 2.5rem;
-  padding-left: 2rem;
+  padding-left: 1.2rem;
 }
 
 .timeline-section::before {
   content: '';
   position: absolute;
-  left: 0.5rem;
+  left: 0;
   top: 0;
   bottom: 0;
   width: 2px;
@@ -83,13 +88,13 @@ order: 5
 .timeline-year::before {
   content: '';
   position: absolute;
-  left: -2rem;
-  width: 14px;
-  height: 14px;
+  left: -1.2rem;
+  width: 12px;
+  height: 12px;
   background: var(--timeline-node-bg, #969898);
   border: 3px solid var(--link-color, #58a6ff);
   border-radius: 50%;
-  box-shadow: 0 0 0 4px var(--body-bg, #0d1117);
+  box-shadow: 0 0 0 3px var(--body-bg, #0d1117);
 }
 
 /* Grid */
