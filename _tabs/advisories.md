@@ -12,6 +12,15 @@ order: 5
   justify-content: flex-end;
 }
 
+/* Hide the right panel and expand content to full width */
+#panel-wrapper {
+  display: none !important;
+}
+#main-wrapper .col-xl-8 {
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
+}
+
 .search-box {
   position: relative;
   width: 280px;
@@ -321,6 +330,7 @@ order: 5
   {% endfor %}
 </div>
 
+{% raw %}
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const searchInput = document.getElementById('advisory-search');
@@ -328,43 +338,40 @@ document.addEventListener("DOMContentLoaded", function() {
   const sections = document.querySelectorAll('.timeline-section');
   const noResults = document.getElementById('no-results');
 
-  // Small helper to make placeholder text more clear
   searchInput.setAttribute('placeholder', 'Search (e.g. "product:n8n", "type:rce", "CVE-2026")...');
 
   searchInput.addEventListener('input', function(e) {
     const rawSearch = e.target.value.toLowerCase().trim();
     let totalVisible = 0;
-    
-    // Parse filters
+
     let searchProduct = null;
     let searchType = null;
     let generalSearch = rawSearch;
-    
+
     const productMatch = rawSearch.match(/product:([^\s]+)/);
     if (productMatch) {
       searchProduct = productMatch[1];
       generalSearch = generalSearch.replace(productMatch[0], '').trim();
     }
-    
+
     const typeMatch = rawSearch.match(/type:([^\s]+)/);
     if (typeMatch) {
       searchType = typeMatch[1];
       generalSearch = generalSearch.replace(typeMatch[0], '').trim();
     }
 
-    cards.forEach(card => {
-      let isVisible = true;
-      const searchableText = card.getAttribute('data-search') || "";
-      
-      // We can grab product and type directly from the elements since we didn't add data-attributes inside liquid above
-      const cardProduct = (card.querySelector('.badge.product')?.textContent || "").toLowerCase();
-      const cardType = (card.querySelector('.badge[class*="type-"]')?.textContent || "").toLowerCase();
-      
-      // Check filters
-      if (searchProduct && !cardProduct.includes(searchProduct)) isVisible = false;
-      if (searchType && !cardType.includes(searchType)) isVisible = false;
-      if (generalSearch && !searchableText.includes(generalSearch)) isVisible = false;
-      
+    cards.forEach(function(card) {
+      var isVisible = true;
+      var searchableText = card.getAttribute('data-search') || "";
+      var productBadge = card.querySelector('.badge.product');
+      var typeBadge = card.querySelector('[class*="type-"]');
+      var cardProduct = productBadge ? productBadge.textContent.toLowerCase() : "";
+      var cardType = typeBadge ? typeBadge.textContent.toLowerCase() : "";
+
+      if (searchProduct && cardProduct.indexOf(searchProduct) === -1) isVisible = false;
+      if (searchType && cardType.indexOf(searchType) === -1) isVisible = false;
+      if (generalSearch && searchableText.indexOf(generalSearch) === -1) isVisible = false;
+
       if (isVisible) {
         card.classList.remove('hidden');
         totalVisible++;
@@ -373,12 +380,10 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
 
-    // Build timeline aesthetics: hide empty years
-    let anySectionVisible = false;
-    sections.forEach(section => {
-      // Find all cards inside this section that are NOT hidden
-      const visibleCardsInYear = section.querySelectorAll('.advisory-card:not(.hidden)');
-      if (visibleCardsInYear.length === 0) {
+    var anySectionVisible = false;
+    sections.forEach(function(section) {
+      var visibleCards = section.querySelectorAll('.advisory-card:not(.hidden)');
+      if (visibleCards.length === 0) {
         section.style.display = 'none';
       } else {
         section.style.display = 'block';
@@ -386,7 +391,6 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
 
-    // Show empty state if needed
     if (!anySectionVisible && rawSearch !== "") {
       noResults.style.display = 'block';
     } else {
@@ -395,3 +399,4 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
+{% endraw %}
