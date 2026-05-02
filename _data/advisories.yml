@@ -1,3 +1,10 @@
+- cve: "CVE-2026-32135"
+  product: "nanomq"
+  type: "RCE"
+  severity: "high"
+  description: "A remotely triggerable heap buffer overflow exists in the uri_param_parse function of NanoMQ's REST API. The vulnerability occurs due to an off-by-one error when allocating memory for query parameter keys and values, allowing an attacker to write a null byte beyond the allocated buffer. This can be triggered via a crafted HTTP request."
+  link: "https://github.com/nanomq/nanomq/security/advisories/GHSA-6w96-9qw7-m599"
+
 - cve: "CVE-2026-27498"
   product: "n8n"
   type: "RCE"
