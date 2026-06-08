@@ -5,7 +5,9 @@
 {% if page.layout == 'home' or page.layout == 'post' %}
 {% if site.google_analytics.pv.enabled %}
 <!-- pv-report needs countup.js -->
-<script async src="https://cdn.jsdelivr.net/npm/countup.js@1.9.3/dist/countUp.min.js"></script>
+<script async src="https://cdn.jsdelivr.net/npm/countup.js@1.9.3/dist/countUp.min.js"
+  integrity="sha384-aufp9yjeX/XyxC6j92TeTYBtsdGDB4RTQHtCkoIHyF9a4ghH29FmxITbkTi+wvXP"
+  crossorigin="anonymous"></script>
 <script async src="{{ '/assets/js/dist/pvreport.min.js' | relative_url }}"></script>
 {% endif %}
 {% endif %}
@@ -23,7 +25,9 @@ or page.layout == 'categories' %}
 
 {% if page.math %}
 <!-- MathJax -->
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"
+  integrity="sha384-Wuix6BuhrWbjDBs24bXrjf4ZQ5aFeFWBuKkFekO2t8xFU0iNaLQfp2K6/1Nxveei"
+  crossorigin="anonymous"></script>
 {% endif %}
 
 {% if jekyll.environment == 'production' %}
