@@ -1,3 +1,11 @@
+- cve: "CVE-2026-63328"
+  product: "Trivy"
+  type: "Path Traversal"
+  severity: "high"
+  description: "A path traversal vulnerability in Trivy's plugin manager allows an attacker to escape the designated plugin directory and overwrite critical files on the system if a user is tricked into installing a crafted plugin. This can lead to persistent backdoors or code execution."
+  link: "https://github.com/aquasecurity/trivy/security/advisories/GHSA-8rc5-4fr6-64pw"
+  post_link: "/posts/trivy-path-traversal-plugin-manager/"
+
 - cve: "CVE-2026-32135"
   product: "nanomq"
   type: "Heap Buffer Overflow"
