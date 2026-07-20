@@ -1,3 +1,10 @@
+- cve: "CVE-2026-WiP1"
+  product: "Gitleaks"
+  type: "Information Disclosure"
+  severity: "medium"
+  description: "A vulnerability in Gitleaks' report-template feature that allows environment variable exfiltration and secret leakage via DNS through abusing Sprig's template functions."
+  post_link: "/posts/gitleaks-abusing-sprig-for-exfiltration/"
+
 - cve: "CVE-2026-63328"
   product: "Trivy"
   type: "Path Traversal"
@@ -5,6 +12,13 @@
   description: "A path traversal vulnerability in Trivy's plugin manager allows an attacker to escape the designated plugin directory and overwrite critical files on the system if a user is tricked into installing a crafted plugin. This can lead to persistent backdoors or code execution."
   link: "https://github.com/aquasecurity/trivy/security/advisories/GHSA-8rc5-4fr6-64pw"
   post_link: "/posts/trivy-path-traversal-plugin-manager/"
+
+- cve: "CVE-2026-WiP2"
+  product: "SyncTeX Parser"
+  type: "Heap Use-After-Free"
+  severity: "medium"
+  description: "A Heap Use-After-Free vulnerability in the SyncTeX parser triggered when parsing malformed SyncTeX files. It allows read/write access to a freed memory region, potentially leading to arbitrary code execution or Denial of Service (DoS)."
+  post_link: "/posts/evince-synctex-heap-use-after-free/"
 
 - cve: "CVE-2026-32135"
   product: "nanomq"
