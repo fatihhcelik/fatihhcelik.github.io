@@ -1,4 +1,4 @@
-- cve: "CVE-2026-WiP1"
+- cve: "CVE-2026-63728"
   product: "Gitleaks"
   type: "Information Disclosure"
   severity: "medium"
@@ -13,7 +13,7 @@
   link: "https://github.com/aquasecurity/trivy/security/advisories/GHSA-8rc5-4fr6-64pw"
   post_link: "/posts/trivy-path-traversal-plugin-manager/"
 
-- cve: "CVE-2026-WiP2"
+- cve: "CVE-2026-63729"
   product: "SyncTeX Parser"
   type: "Heap Use-After-Free"
   severity: "medium"

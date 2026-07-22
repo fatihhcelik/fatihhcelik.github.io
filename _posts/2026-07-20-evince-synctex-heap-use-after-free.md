@@ -1,5 +1,5 @@
 ---
-title: 'Use-After-Free in SyncTeX Parser'
+title: 'TexLive: Use-After-Free in SyncTeX Parser - CVE-2026-63729'
 author: Fatih Çelik
 date: 2026-07-20 22:58:20 +0300
 categories: [Vulnerability Research]

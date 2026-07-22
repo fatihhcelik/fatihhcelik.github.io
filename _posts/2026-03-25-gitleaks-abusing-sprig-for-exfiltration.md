@@ -1,5 +1,5 @@
 ---
-title: 'Gitleaks: Abusing Sprig Template Functions for Secret Exfiltration'
+title: 'Gitleaks: Abusing Sprig Template Functions for Secret Exfiltration - CVE-2026-63728'
 author: Fatih Çelik
 date: 2026-03-25 13:00:00 +0300
 categories: [Vulnerability Research]
