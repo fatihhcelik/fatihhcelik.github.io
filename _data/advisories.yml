@@ -14,7 +14,7 @@
   post_link: "/posts/trivy-path-traversal-plugin-manager/"
 
 - cve: "CVE-2026-63729"
-  product: "SyncTeX Parser"
+  product: "texlive-source"
   type: "Heap Use-After-Free"
   severity: "medium"
   description: "A Heap Use-After-Free vulnerability in the SyncTeX parser triggered when parsing malformed SyncTeX files. It allows read/write access to a freed memory region, potentially leading to arbitrary code execution or Denial of Service (DoS)."
